@@ -77,7 +77,7 @@ person.email = 'musfiq552608@gmail.com';
 console.log(person);*/
 
 
-const todos = [
+/*const todos = [
 
     {
         id: 1,
@@ -101,7 +101,7 @@ const todos = [
 ];
 
 const todosJSON = JSON.stringify(todos);
-console.log(todosJSON);
+console.log(todosJSON);*/
 
 //for
 
@@ -117,7 +117,7 @@ while(i<10){
     i++;
 }*/
 
-for(let i=0; i<todos.length; i++){
+/*for(let i=0; i<todos.length; i++){
     console.log(todos[i].text);
 }
 
@@ -141,6 +141,94 @@ console.log(todoText);
 
 const todoCompleted = todos.filter(function(todo){
     return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
 });
 
-console.log(todoCompleted);
+console.log(todoCompleted);*/
+
+//conditions
+
+/*const x = 101;
+
+if(x == 10){
+    console.log('x is 10');
+}else{
+    console.log('x is not 10');
+}*/
+
+
+/*const x = 10;
+
+const color = x>10?'red':'blue';
+
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'bule':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is not red or blue');
+        break;
+}*/
+
+
+//function
+
+/*function addNums(num1=1, num2=1){
+    return num1+num2;
+}
+
+console.log(addNums(10,5));*/
+
+
+/*const addNums = (num1 = 1, num2 = 1) =>{
+    console.log(num1+num2);
+}
+
+addNums(10,10);*/
+
+
+//constructor function
+/*function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+Person.prototype.getBirthYear = function(){
+    return this.dob.getFullYear();
+}
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}*/
+
+//Class
+
+class Person{
+    constructor(firstName,lastName,dob){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear(){
+        return this.dob.getFullYear();
+    }
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+}
+
+//Instantiate object
+const person1 = new Person('Musfiqur','Rahman', '02-05-1999');
+const person2 = new Person('Sakibur','Rahman', '03-08-2003');
+
+console.log(person1);
+console.log(person2);
+
+
+
